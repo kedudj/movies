@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Add-Movie</title>
+</head>
+<body>
+
+<h1>Dodaj film:</h1>
+
+<form action="/admin/add" method="post" th:object="${movieForm}"><br/>
+    Podaj tytul: <input type="text" th:field="*{title}"><br/>
+    Podaj autora: <input type="text" th:field="*{author}"><br/>
+    Podaj rok wydania: <input type="number" th:field="*{year}"><br/>
+    Podaj gatunek: <input type="text" th:field="*{movieGenre}"><br/>
+    Opisz (w skrocie): <input type="text" th:field="*{briefDescription}"><br/>
+    Podaj fabule: <input type="text" th:field="*{longDescription}"><br/>
+
+    <input type="submit" value="Dodaj">
+
+
+</form>
+
+
+</body>
+</html>
